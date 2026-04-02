@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OMKAR // 3D PORTFOLIO</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#353534",
+              "primary-fixed-dim": "#00daf3",
+              "surface-container-highest": "#353534",
+              "on-tertiary-container": "#575959",
+              "secondary": "#b1cad7",
+              "tertiary": "#ececec",
+              "inverse-on-surface": "#313030",
+              "surface-container-lowest": "#0e0e0e",
+              "on-secondary": "#1c333e",
+              "tertiary-container": "#d0d0d0",
+              "on-tertiary-fixed-variant": "#454747",
+              "on-primary-fixed": "#001f24",
+              "outline": "#849396",
+              "on-primary": "#00363d",
+              "on-error": "#690005",
+              "on-primary-container": "#00626e",
+              "primary": "#c3f5ff",
+              "secondary-fixed": "#cde6f4",
+              "surface-container": "#201f1f",
+              "surface-container-high": "#2a2a2a",
+              "surface-dim": "#131313",
+              "error-container": "#93000a",
+              "on-tertiary-fixed": "#1a1c1c",
+              "inverse-primary": "#006875",
+              "on-surface-variant": "#bac9cc",
+              "on-secondary-container": "#a0b9c5",
+              "surface-bright": "#3a3939",
+              "on-secondary-fixed-variant": "#334a55",
+              "on-tertiary": "#2f3131",
+              "surface-tint": "#00daf3",
+              "on-surface": "#e5e2e1",
+              "tertiary-fixed-dim": "#c6c6c7",
+              "primary-fixed": "#9cf0ff",
+              "outline-variant": "#3b494c",
+              "secondary-fixed-dim": "#b1cad7",
+              "error": "#ffb4ab",
+              "on-secondary-fixed": "#051e28",
+              "surface": "#131313",
+              "on-primary-fixed-variant": "#004f58",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-low": "#1c1b1b",
+              "tertiary-fixed": "#e2e2e2",
+              "background": "#131313",
+              "on-background": "#e5e2e1",
+              "primary-container": "#00e5ff",
+              "secondary-container": "#334a55"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 229, 255, 0.15);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+        }
+        .rim-glow {
+            box-shadow: inset 0 0 15px rgba(195, 245, 255, 0.1);
+        }
+        .energy-line {
+            background: linear-gradient(90deg, transparent, #00e5ff, transparent);
+            height: 1px;
+            filter: blur(1px);
+        }
+        .scanner-line {
+            height: 2px;
+            background: rgba(0, 229, 255, 0.5);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        @keyframes scan {
+            from { top: 0% }
+            to { top: 100% }
+        }
+        .animate-scan {
+            animation: scan 4s linear infinite;
+        }
+        body {
+            background-color: #131313;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+<!-- NAVIGATION SHELL: SideNavBar (Fixed Left) -->
+<nav class="fixed left-0 top-0 h-full z-50 flex flex-col items-center py-8 bg-slate-950/40 backdrop-blur-xl w-20 border-r border-cyan-500/10 shadow-[0px_20px_50px_rgba(0,229,255,0.06)]">
+<div class="mb-12">
+<span class="text-xl font-bold tracking-tighter text-cyan-50 font-headline">OMKAR</span>
+</div>
+<div class="flex flex-col gap-10">
+<!-- Active: Projects -->
+<a class="group relative flex flex-col items-center text-cyan-300 drop-shadow-[0_0_8px_rgba(0,229,255,0.8)] scale-110 transition-all duration-500" href="#">
+<span class="material-symbols-outlined text-[28px]" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-headline uppercase tracking-widest text-[10px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Projects</span>
+</a>
+<a class="group relative flex flex-col items-center text-slate-500 opacity-60 hover:text-cyan-200 hover:opacity-100 transition-all duration-500" href="#">
+<span class="material-symbols-outlined text-[28px]" data-icon="terminal">terminal</span>
+<span class="font-headline uppercase tracking-widest text-[10px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Skills</span>
+</a>
+<a class="group relative flex flex-col items-center text-slate-500 opacity-60 hover:text-cyan-200 hover:opacity-100 transition-all duration-500" href="#">
+<span class="material-symbols-outlined text-[28px]" data-icon="person_search">person_search</span>
+<span class="font-headline uppercase tracking-widest text-[10px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity">About</span>
+</a>
+<a class="group relative flex flex-col items-center text-slate-500 opacity-60 hover:text-cyan-200 hover:opacity-100 transition-all duration-500" href="#">
+<span class="material-symbols-outlined text-[28px]" data-icon="alternate_email">alternate_email</span>
+<span class="font-headline uppercase tracking-widest text-[10px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Contact</span>
+</a>
+</div>
+<div class="mt-auto">
+<div class="w-10 h-10 rounded-full border border-cyan-500/30 overflow-hidden p-0.5">
+<img alt="Omkar Profile" class="w-full h-full object-cover rounded-full" data-alt="close-up portrait of a creative developer with a sharp profile against a futuristic dark tech environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbj8wQK_sWgROARkFc5moF_HrxJsitrDu_ZntFsj1cCGySb7xC1eFbh7qyPTyqtggmHqOXfzFDv66MIU9hdHjrK79UbcAIT5Fr0ReRthqEdfD1z_hpwU3y4Xsioa1fFVGE_yOuShxJYj1kacGQGabaIpTkQfQ15Ve75qHEfBu06T0Xi8n1AttCQXg7Wo1b9AVGjCmug18D4aQWNMhFTMypKmHgN24gOys1LtDSVVTNsqgDTAkEQ1VAxF9GlYzJ0pHkEAE2bfTKzWI"/>
+</div>
+</div>
+</nav>
+<!-- TOP BAR -->
+<header class="flex justify-between items-center w-full px-12 py-6 fixed top-0 z-40 pl-32">
+<div class="font-headline text-lg font-black text-cyan-50 tracking-widest">
+            OMKAR // 3D
+        </div>
+<div class="flex items-center gap-6 text-cyan-300">
+<span class="material-symbols-outlined hover:text-cyan-400 transition-colors cursor-pointer" data-icon="settings_input_component">settings_input_component</span>
+<span class="material-symbols-outlined hover:text-cyan-400 transition-colors cursor-pointer" data-icon="sensors">sensors</span>
+</div>
+</header>
+<!-- MAIN CINEMATIC SCENE CONTAINER -->
+<main class="relative min-h-screen w-full flex items-center justify-center p-8 lg:p-24 overflow-hidden">
+<!-- BACKDROP AMBIENCE (3D ENVIRONMENT SIMULATION) -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-surface via-surface-container-lowest to-surface"></div>
+<!-- Animated Particles (Visualized through CSS for static representation) -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary-container/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-surface-tint/5 blur-[150px] rounded-full"></div>
+</div>
+<!-- Fog Layer -->
+<div class="absolute inset-0 bg-surface opacity-30 backdrop-blur-[2px]"></div>
+</div>
+<!-- CENTRAL 3D GLASS PANEL & CHARACTER -->
+<div class="relative z-10 w-full max-w-6xl aspect-[16/9] flex items-center justify-center">
+<!-- Floating Central Glass -->
+<div class="glass-panel rim-glow relative w-[320px] lg:w-[420px] aspect-[2/3] lg:aspect-[3/4] flex flex-col items-center justify-center p-8 overflow-hidden rounded-xl border-cyan-500/20">
+<div class="animate-scan scanner-line"></div>
+<!-- Central Image Character -->
+<div class="relative w-full h-full grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="Central Character" class="w-full h-full object-cover opacity-80" data-alt="heroic central character wearing high-tech sleek black armor plates with glowing cyan internal power lines in a misty cinematic setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP7o4pL7h4WDNCRg_WJfhsdDgzoat4sCZ9SKHtrXSdtzDIuYxoBzjGpy4JV6HG07ELpCWyVTiIbZk6dj5DK37aTxvapdW1g7ksMmrvs6MP55mvvSga6Zc5w2H3jJJi9ImHLJ77bqzJvrMLpHyAnJc_zW6harWZelbss--oUdKdzRt-ifDtdV_U7QhNMfmrUPNG6sjK-b4Nufs22t4vfFntrKzy5kzmHCofS6wSrS13HOST_awiQqgzj-9zjJxtYYAaMTGVtraAeDQ"/>
+<!-- Robotic Assembly Overlays (Simulating the pieces flying in) -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 w-48 h-48 border-2 border-cyan-400/20 rounded-full animate-pulse flex items-center justify-center">
+<div class="w-12 h-12 bg-cyan-400/10 rounded-full blur-md"></div>
+</div>
+</div>
+<!-- UI OVERLAY ON GLASS -->
+<div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+<h1 class="font-headline text-5xl lg:text-7xl font-bold -tracking-0.02em text-primary-fixed-dim leading-none mb-4">Omkar</h1>
+<p class="font-body text-on-surface-variant text-sm lg:text-base leading-relaxed tracking-wide">
+                        Creative Web Developer building 3D web experiences.
+                    </p>
+<div class="mt-6 flex gap-2">
+<span class="px-2 py-0.5 border border-cyan-500/30 text-[10px] font-headline uppercase text-cyan-300">3D CORE // ACTIVE</span>
+<span class="px-2 py-0.5 border border-cyan-500/30 text-[10px] font-headline uppercase text-cyan-300">PROTO-SYSTEM 0.1</span>
+</div>
+</div>
+</div>
+<!-- ASYMMETRIC FLOATING CARDS (Orbiting Central Panel) -->
+<!-- PROJECTS (Top Right) -->
+<div class="hidden lg:block absolute -top-12 -right-12 w-80 glass-panel p-6 rounded-lg transform rotate-3 hover:rotate-0 transition-transform duration-700">
+<div class="absolute -left-20 top-1/2 w-20 energy-line"></div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary-container" data-icon="layers">layers</span>
+<h3 class="font-headline uppercase tracking-widest text-xs font-bold text-cyan-50">PROJECTS</h3>
+</div>
+<ul class="space-y-4">
+<li class="group cursor-pointer">
+<div class="text-[11px] font-headline text-cyan-500/60 uppercase mb-1">01 // VISUALIZATION</div>
+<div class="text-on-surface font-medium group-hover:text-primary transition-colors">Procedural 3D Gallery</div>
+</li>
+<li class="group cursor-pointer">
+<div class="text-[11px] font-headline text-cyan-500/60 uppercase mb-1">02 // INTERFACE</div>
+<div class="text-on-surface font-medium group-hover:text-primary transition-colors">Neon Dashboard</div>
+</li>
+<li class="group cursor-pointer">
+<div class="text-[11px] font-headline text-cyan-500/60 uppercase mb-1">03 // INTELLIGENCE</div>
+<div class="text-on-surface font-medium group-hover:text-primary transition-colors">AI Visualization Tool</div>
+</li>
+<li class="group cursor-pointer">
+<div class="text-[11px] font-headline text-cyan-500/60 uppercase mb-1">04 // EXPERIENCE</div>
+<div class="text-on-surface font-medium group-hover:text-primary transition-colors">Interactive Landing Page</div>
+</li>
+</ul>
+</div>
+<!-- SKILLS (Bottom Left) -->
+<div class="hidden lg:block absolute bottom-0 -left-24 w-72 glass-panel p-6 rounded-lg transform -rotate-2 hover:rotate-0 transition-transform duration-700">
+<div class="absolute -right-20 top-1/2 w-20 energy-line"></div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary-container" data-icon="electric_bolt">electric_bolt</span>
+<h3 class="font-headline uppercase tracking-widest text-xs font-bold text-cyan-50">TECH STACK</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded text-[11px] font-medium border border-cyan-500/10 hover:border-cyan-500/40 transition-colors">Web Development</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[11px] font-medium border border-cyan-500/10 hover:border-cyan-500/40 transition-colors">Three.js</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[11px] font-medium border border-cyan-500/10 hover:border-cyan-500/40 transition-colors">Blender</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[11px] font-medium border border-cyan-500/10 hover:border-cyan-500/40 transition-colors">Python</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[11px] font-medium border border-cyan-500/10 hover:border-cyan-500/40 transition-colors">UI/UX</span>
+</div>
+</div>
+<!-- ABOUT (Center Right) -->
+<div class="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-32 w-64 glass-panel p-6 rounded-lg transform -rotate-1 hover:rotate-0 transition-transform duration-700">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="id_card">id_card</span>
+<h3 class="font-headline uppercase tracking-widest text-xs font-bold text-cyan-50">CORE BIO</h3>
+</div>
+<p class="text-xs leading-relaxed text-on-surface-variant font-medium">
+                    Omkar is a creative developer focused on building immersive 3D and interactive web interfaces.
+                </p>
+<div class="mt-6 pt-4 border-t border-cyan-500/10 flex items-center justify-between text-[10px] text-cyan-500">
+<span>STATUS: ONLINE</span>
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+</div>
+</div>
+<!-- MOBILE FALLBACK CARDS -->
+<div class="lg:hidden mt-12 grid grid-cols-1 gap-4 w-full">
+<div class="glass-panel p-4 rounded-lg">
+<h3 class="font-headline uppercase tracking-widest text-[10px] text-cyan-50 mb-2">Projects</h3>
+<div class="text-xs text-on-surface-variant">Procedural 3D Gallery, Neon Dashboard...</div>
+</div>
+<div class="glass-panel p-4 rounded-lg">
+<h3 class="font-headline uppercase tracking-widest text-[10px] text-cyan-50 mb-2">Contact</h3>
+<div class="text-xs text-on-surface-variant truncate">omkarmarennavaromu@gmail.com</div>
+</div>
+</div>
+</div>
+<!-- FOOTER CONTACT PANEL (Glass Dock) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 w-max glass-panel px-8 py-4 rounded-full flex items-center gap-8 border-cyan-500/10 ml-10">
+<a class="flex items-center gap-2 hover:text-primary transition-colors group" href="mailto:omkarmarennavaromu@gmail.com">
+<span class="material-symbols-outlined text-lg" data-icon="mail">mail</span>
+<span class="text-xs font-headline tracking-widest hidden md:block">EMAIL</span>
+</a>
+<div class="h-4 w-[1px] bg-cyan-500/20"></div>
+<a class="flex items-center gap-2 hover:text-primary transition-colors group" href="https://instagram.com/07_omya_650" target="_blank">
+<span class="material-symbols-outlined text-lg" data-icon="public">public</span>
+<span class="text-xs font-headline tracking-widest hidden md:block">INSTAGRAM</span>
+</a>
+<div class="h-4 w-[1px] bg-cyan-500/20"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-cyan-500" data-icon="call">call</span>
+<span class="text-xs font-headline tracking-widest">9538626167</span>
+</div>
+</div>
+</main>
+<!-- CINEMATIC OVERLAYS -->
+<div class="pointer-events-none fixed inset-0 z-[60] border-[40px] border-slate-950/20"></div>
+<div class="pointer-events-none fixed inset-0 z-[60] bg-[radial-gradient(circle_at_center,transparent_0%,rgba(19,19,19,0.4)_100%)]"></div>
+</body></html>
